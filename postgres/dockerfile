@@ -1,0 +1,13 @@
+# Utilisation de l'image officielle PostgreSQL
+FROM postgres:latest
+
+# Définition des variables d'environnement pour configurer la base de données
+ENV POSTGRES_DB ecyriaque
+ENV POSTGRES_USER ecyriaque
+ENV POSTGRES_PASSWORD emsko93100
+
+# Copie d'un script SQL pour créer la base de données et l'utilisateur
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# Exposition du port par défaut de PostgreSQL (5432)
+EXPOSE 5432
