@@ -13,7 +13,7 @@ import java.util.List;
 public class AnnonceService {
 
     private final RestTemplate restTemplate;
-
+    
     private final String annonceServiceBaseUrl = "http://localhost:8080/api/annonces";
 
     @Autowired
