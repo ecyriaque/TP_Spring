@@ -14,7 +14,7 @@ public class AnnonceService {
 
     private final RestTemplate restTemplate;
 
-    private final String annonceServiceBaseUrl = "https://verbose-halibut-g4546pjrpqf99pg-8080.app.github.dev/api/annonces";
+    private final String annonceServiceBaseUrl = "http://localhost:8080/api/annonces";
 
     @Autowired
     public AnnonceService(RestTemplate restTemplate) {

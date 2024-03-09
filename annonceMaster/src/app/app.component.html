@@ -1,0 +1,32 @@
+<!-- app.component.html -->
+
+<!-- Header -->
+<header
+  class="p-d-flex p-jc-between p-ai-center p-shadow-2 p-p-3"
+  style="background-color: #f0f0f0"
+>
+  <!-- Titre de l'application -->
+  <h1 class="p-m-0">Mon Application</h1>
+
+  <!-- Bouton de déconnexion -->
+  <div>
+    <button
+      *ngIf="isLoggedIn()"
+      class="p-button p-button-outlined p-button-rounded p-button-sm p-button-danger"
+      (click)="logout()"
+    >
+      Déconnexion
+    </button>
+  </div>
+</header>
+
+<!-- Contenu principal -->
+<main>
+  <router-outlet></router-outlet>
+  <!-- Le routeur Angular injectera ici le contenu du composant correspondant à la route active -->
+</main>
+
+<!-- Footer -->
+<footer>
+  <!-- Votre code HTML pour le pied de page de l'application -->
+</footer>

@@ -9,6 +9,7 @@ import com.example.annonce.service.AnnonceService;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/annonces")
 public class AnnonceController {
 
@@ -20,9 +21,10 @@ public class AnnonceController {
     }
 
     @GetMapping
-    public List<Annonce> getAllAnnonces() {
+    public List<Annonce> getAllAnnonces(@RequestHeader("Authorization") String authorizationHeader) {
+        // Utilisez authorizationHeader pour accéder à la valeur du header Authorization
+        System.out.println("Authorization Header: " + authorizationHeader);
+        
         return annonceService.getAllAnnonces();
     }
-
-    // Implémentez les autres méthodes du contrôleur pour appeler les méthodes appropriées de AnnonceService
 }

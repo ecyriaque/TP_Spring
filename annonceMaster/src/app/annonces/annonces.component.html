@@ -1,0 +1,14 @@
+<div class="p-grid p-justify-center">
+  <div class="p-col-12">
+    <h1 class="p-text-center">Liste des annonces</h1>
+  </div>
+  <div class="p-col-10 p-md-8 p-lg-6">
+    <ul class="p-card-list">
+      <li *ngFor="let annonce of annonces" class="p-card p-card-hoverable">
+        <h2>Titre: {{ annonce.title }}</h2>
+        <p>Description: {{ annonce.description }}</p>
+        <p>Adresse: {{ annonce.address }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
